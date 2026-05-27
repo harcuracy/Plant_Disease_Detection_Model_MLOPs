@@ -1,0 +1,28 @@
+tensorflow==2.12.0; python_version < "3.12"
+tensorflow; python_version >= "3.12"
+pandas
+gdown
+dagshub 
+dvc
+mlflow
+notebook
+numpy
+matplotlib
+scikit-learn
+seaborn
+python-box==6.0.2
+pyYAML
+tqdm
+ensure==1.0.2
+joblib
+types-pyYAML
+scipy
+fastapi
+uvicorn[standard]
+python-multipart
+kagglehub==0.3.13
+pillow
+pytest
+httpx
+
+-e .

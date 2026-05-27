@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cnnClassifier"
+version = "0.0.0"
+description = "Plant disease detection"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+  { name = "harcuracy619", email = "akandesoji4christ@gmail.com" }
+]
+
+[project.urls]
+Homepage = "https://github.com/harcuracy619/Mlops-End-To-End-Plant-Disease-Detection"
+"Bug Tracker" = "https://github.com/harcuracy619/Mlops-End-To-End-Plant-Disease-Detection/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]

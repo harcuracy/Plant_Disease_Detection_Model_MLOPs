@@ -1,0 +1,14 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.mypy_cache
+.ipynb_checkpoints
+logs
+artifacts/data_ingestion/raw
+artifacts/data_ingestion/subset
+research/.ipynb_checkpoints

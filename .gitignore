@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+.venv310/
+venv/
+env/
+
+# Logs
+logs/
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local environment
+.env
+.env.*
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# ML artifacts and datasets
+artifacts/data_ingestion/raw/
+artifacts/data_ingestion/subset/
+artifacts/prepare_base_model/*.h5
+artifacts/training/*.h5
+artifacts/evaluation/*.json
+artifacts/research_subset/
+artifacts/research_model.h5
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

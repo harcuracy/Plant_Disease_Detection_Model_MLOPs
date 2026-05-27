@@ -1,0 +1,8 @@
+.venv/
+.venv310/
+__pycache__/
+*.pyc
+logs/
+.git/
+.github/
+research/.ipynb_checkpoints/
