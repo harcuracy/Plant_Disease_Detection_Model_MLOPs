@@ -1,9 +1,14 @@
+import logging
 import os
 from pathlib import Path
-from cnnClassifier import logger
 
 
-project_name = 'cnnClassifier'
+logging.basicConfig(
+    level=logging.INFO,
+    format="[%(asctime)s: %(levelname)s: %(message)s]",
+)
+
+project_name = "cnnClassifier"
 
 list_of_files = [
     f"src/{project_name}/__init__.py",
@@ -17,12 +22,16 @@ list_of_files = [
     "config/config.yaml",
     "dvc.yaml",
     "params.yaml",
-    "requirements.txt",
-    "setup.py",
+    "pyproject.toml",
     "research/trials.ipynb",
-    "templates/index.html"
-
-
+    "templates/index.html",
+    "tests/__init__.py",
+    ".github/workflows/ecr.yml",
+    ".env.example",
+    ".gitignore",
+    ".dockerignore",
+    "Dockerfile",
+    "README.md",
 ]
 
 
@@ -30,16 +39,12 @@ for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
 
-
-    if filedir !="":
+    if filedir:
         os.makedirs(filedir, exist_ok=True)
-        logger.info(f"Creating directory: {filedir} for the file: {filename}")
+        logging.info("Creating directory: %s for the file: %s", filedir, filename)
 
-    if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
-        with open(filepath, "w") as f:
-            pass
-            logger.info(f"Creating empty file: {filepath}")
-
-
+    if not filepath.exists() or filepath.stat().st_size == 0:
+        filepath.touch()
+        logging.info("Creating empty file: %s", filepath)
     else:
-        logger.info(f"{filename} already exists")
+        logging.info("%s already exists", filename)

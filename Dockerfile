@@ -12,10 +12,10 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt setup.py README.md ./
+COPY pyproject.toml README.md ./
 COPY src ./src
 RUN pip install --upgrade pip \
-    && pip install -r requirements.txt
+    && pip install .
 
 COPY app.py main.py dvc.yaml params.yaml ./
 COPY config ./config

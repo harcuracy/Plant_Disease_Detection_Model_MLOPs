@@ -45,6 +45,6 @@ class Evaluation:
             import tensorflow as tf
         except ModuleNotFoundError as exc:
             raise ModuleNotFoundError(
-                "tensorflow is required for evaluation. Install project dependencies with: pip install -r requirements.txt"
+                "tensorflow is required for evaluation. Install project dependencies with: uv sync"
             ) from exc
         return tf

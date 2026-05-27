@@ -7,9 +7,36 @@ name = "cnnClassifier"
 version = "0.0.0"
 description = "Plant disease detection"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10,<3.12"
 authors = [
   { name = "harcuracy619", email = "akandesoji4christ@gmail.com" }
+]
+dependencies = [
+  "tensorflow==2.12.0",
+  "pandas",
+  "gdown",
+  "dagshub",
+  "dvc",
+  "mlflow",
+  "notebook",
+  "numpy",
+  "matplotlib",
+  "scikit-learn",
+  "seaborn",
+  "python-box==6.0.2",
+  "PyYAML",
+  "tqdm",
+  "ensure==1.0.2",
+  "joblib",
+  "types-PyYAML",
+  "scipy",
+  "fastapi",
+  "uvicorn[standard]",
+  "python-multipart",
+  "kagglehub==0.3.13",
+  "pillow",
+  "pytest",
+  "httpx",
 ]
 
 [project.urls]

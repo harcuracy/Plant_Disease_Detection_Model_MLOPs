@@ -69,20 +69,14 @@ Increase `max_images_per_class` when you are ready for longer training.
 Create and activate a virtual environment:
 
 ```powershell
-python -m venv .venv
+uv venv --python 3.11
 .venv\Scripts\activate
 ```
 
 Install dependencies:
 
 ```powershell
-pip install -r requirements.txt
-```
-
-Install the package in editable mode:
-
-```powershell
-pip install -e .
+uv sync
 ```
 
 Copy the sample environment file if you want local runtime variables:
@@ -150,7 +144,7 @@ prepare_base_model:
 
 training:
   batch_size: 16
-  epochs: 1
+  epochs: 20
   augmentation: true
 ```
 
